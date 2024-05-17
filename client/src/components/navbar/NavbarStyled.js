@@ -2,24 +2,11 @@ import styled from 'styled-components';
 
 export const Header = styled.header`
     
-
+    
     border-bottom: 1px solid #ececec;
-    /* outline: 1px solid red; */
-
-    /* @media screen and (max-width: 767.5px) {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #ffffff;
-        z-index: 1000;
-    } */
 `
 
 export const HeaderContainer = styled.div`
-/* outline: 1px solid red; */
-    
-    
     margin-left: auto;
     margin-right: auto;
 
@@ -60,10 +47,6 @@ export const Logo = styled.a`
     @media screen and (max-width: 767.5px){
         display: none;
     }
-
-    /* &:hover{
-        transform: scale(1.02);
-    } */
 `
 
 export const MenuButton = styled.button`
@@ -72,13 +55,12 @@ export const MenuButton = styled.button`
     justify-content: center;
     margin-right: 16px;
     
-    background-color: white;
+    background-color: #ffffff;
     border: none;
     
     & svg {
     width: 24px;
     height: 24px;
-    /* padding: 12px 0; */
   }
 
     @media screen and (min-width: 768px){
@@ -95,13 +77,14 @@ export const CatalogButton = styled.button`
     height: 40px;
 
     cursor: pointer;
-    color: white;
+    color: #ffffff;
     background-color: #F37A1F;
     border-radius: 4px;
     border: none;
 
     font-size: 16px;
-    
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     &:hover{
         transform: scale(1.02);
     }
@@ -137,10 +120,11 @@ export const SearchContainer = styled.div`
     height: 24px;
     padding: 8px;
 
-    color: white;
+    color: #ffffff;
     background-color: #F37A1F;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
     & svg:hover{
         transform: scale(1.02);
@@ -191,7 +175,6 @@ export const ButtonContainer = styled.div`
     display: flex;
     align-items: center;
     margin-left: auto;
-    /* outline: 1px solid red; */
 `
 
 export const ButtonUser = styled.button`
@@ -209,11 +192,10 @@ export const ButtonUser = styled.button`
     width: 24px;
     height: 24px;
     padding: 4px 8px;
-    
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
    & svg:hover{
-        transform: scale(1.02);
         color: #F37A1F;
     }
 
@@ -223,7 +205,6 @@ export const ButtonUser = styled.button`
 `
 
 export const ButtonCart = styled.button`
-/* outline: 1px solid red; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -236,7 +217,7 @@ export const ButtonCart = styled.button`
     width: 24px;
     height: 24px;
     padding: 4px 0 4px 8px;
-    
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
    & svg:hover{
