@@ -26,7 +26,7 @@ function Login({ onClose }) {
     <Overlay onClick={onClose}>
       <ModalContent onClick={(e) => e.stopPropagation()}>
         <CloseButton type='button' onClick={onClose}>Х</CloseButton>
-        <ModalTitle>{ isRegistration ? 'Реєстріція' : 'Вхід'}</ModalTitle>
+        <ModalTitle>{ isRegistration ? 'Реєстрація' : 'Вхід'}</ModalTitle>
         <form>
               {isRegistration && (
                 <InputContainer>

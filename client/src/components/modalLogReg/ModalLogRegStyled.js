@@ -8,7 +8,7 @@ export const Overlay = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 2;
+    z-index: 4;
 
     background-color: rgba(0,0,0,0.5);
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -19,13 +19,20 @@ export const ModalContent = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    z-index: 3;
+    z-index: 5;
 
     width: 528px;
-    background-color: white;
+    background-color: #ffffff;
     padding: 20px;
-    border-radius: 5px;
     
+        @media screen and (max-width: 767.5px){
+        width: 101%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+    @media screen and (min-width: 768px){
+        border-radius: 5px;
+    }
 `
 
 export const CloseButton = styled.div`
@@ -66,8 +73,8 @@ export const ModalInput = styled.input`
     cursor: pointer;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
-    
     box-sizing: border-box;
+
      &:hover {
         border-color: rgba(243, 122, 31, 0.5);
     }
@@ -111,7 +118,9 @@ export const ChangButton = styled.button`
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
 
-      &:hover {
+    @media screen and (min-width: 768px){
+          &:hover {
         color: #F37A1F;
+        }
     }
 `
